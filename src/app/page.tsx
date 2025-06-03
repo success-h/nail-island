@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   Menu,
   X,
@@ -11,11 +11,9 @@ import {
   Calendar,
   Phone,
   MapPin,
-  Instagram,
-  Facebook,
-  Twitter,
-} from 'lucide-react';
-import Image from 'next/image';
+} from "lucide-react";
+import { FaWhatsapp, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
+import Image from "next/image";
 
 const ModernNailsLanding = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,8 +21,8 @@ const ModernNailsLanding = () => {
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMobileMenu = () => {
@@ -33,27 +31,27 @@ const ModernNailsLanding = () => {
 
   const testimonials = [
     {
-      name: 'Sarah M.',
+      name: "Sarah M.",
       rating: 5,
-      text: 'Absolutely stunning work! My nails have never looked better.',
+      text: "Absolutely stunning work! My nails have never looked better.",
     },
     {
-      name: 'Jessica L.',
+      name: "Jessica L.",
       rating: 5,
-      text: 'The attention to detail is incredible. Highly recommend!',
+      text: "The attention to detail is incredible. Highly recommend!",
     },
     {
-      name: 'Emma K.',
+      name: "Emma K.",
       rating: 5,
-      text: 'Such a relaxing experience with amazing results every time.',
+      text: "Such a relaxing experience with amazing results every time.",
     },
   ];
 
   const services = [
-    { name: 'Classic Manicure', price: '€35', duration: '45 min' },
-    { name: 'Gel Manicure', price: '€50', duration: '60 min' },
-    { name: 'Nail Art Design', price: '€65', duration: '90 min' },
-    { name: 'Acrylic Extensions', price: '€70', duration: '120 min' },
+    { name: "Classic Manicure", price: "€35", duration: "45 min" },
+    { name: "Gel Manicure", price: "€50", duration: "60 min" },
+    { name: "Nail Art Design", price: "€65", duration: "90 min" },
+    { name: "Acrylic Extensions", price: "€70", duration: "120 min" },
   ];
 
   return (
@@ -80,8 +78,8 @@ const ModernNailsLanding = () => {
       <nav
         className={`fixed w-full z-50 px-4 sm:px-6 lg:px-8 py-4 transition-all duration-300 ${
           scrollY > 50
-            ? 'bg-white/80 backdrop-blur-md shadow-lg'
-            : 'bg-transparent'
+            ? "bg-white/80 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -96,21 +94,23 @@ const ModernNailsLanding = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {['About', 'Services', 'Artists', 'Gallery', 'Contact'].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium relative group"
-                >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              )
-            )}
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium">
+            {["Services", "Testimonials", "Gallery", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium relative group"
+              >
+                {item}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ))}
+            <a
+              href="https://cal.com/dtdigital/30min"
+              target="_blank"
+              className="bg-gradient-to-r hover:from-purple-300 from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium"
+            >
               Book Now
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -128,23 +128,21 @@ const ModernNailsLanding = () => {
         <div
           className={`lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300 ${
             isMobileMenuOpen
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 -translate-y-4 pointer-events-none'
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-4 pointer-events-none"
           }`}
         >
           <div className="px-4 py-6 space-y-4">
-            {['About', 'Services', 'Artists', 'Gallery', 'Contact'].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="block py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              )
-            )}
+            {["About", "Services", "Gallery", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="block py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item}
+              </a>
+            ))}
             <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 font-medium">
               Book Now
             </button>
@@ -170,38 +168,56 @@ const ModernNailsLanding = () => {
                     Nails
                   </span>
                 </h2>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+                <p className="text-xl text-gray-600 font-sans leading-relaxed max-w-lg">
                   Experience luxury nail care with our expert artists using
                   premium, eco-friendly products in a relaxing atmosphere.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center">
+                <a
+                  href="https://cal.com/dtdigital/30min"
+                  target="_blank"
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer hover:from-purple-300 flex items-center"
+                >
                   <Calendar size={20} className="mr-2" />
                   BOOK APPOINTMENT
-                </button>
-                <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-medium hover:border-purple-600 hover:text-purple-600 transition-all duration-300 flex items-center">
-                  <Phone size={20} className="mr-2" />
+                </a>
+                <a
+                  href="https://wa.me/+310622558806"
+                  target="_blank"
+                  className="border-2 border-gray-300 cursor-pointer text-gray-700 px-8 py-4 rounded-full text-lg font-medium hover:border-purple-600 hover:text-purple-600 transition-all duration-300 flex items-center"
+                >
+                  <FaWhatsapp size={20} className="mr-2" />
                   Call Us
-                </button>
+                </a>
               </div>
 
               {/* Stats */}
               <div className="flex gap-8 pt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600">500+</div>
-                  <div className="text-sm text-gray-600">Happy Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-600">5.0</div>
-                  <div className="text-sm text-gray-600 flex items-center">
+                  {[...Array(5)].map((_, i) => (
                     <Star
-                      size={14}
-                      className="fill-yellow-400 text-yellow-400 mr-1"
+                      key={i}
+                      size={20}
+                      className="inline fill-yellow-400 text-yellow-400"
                     />
-                    Rating
-                  </div>
+                  ))}
+
+                  <a
+                    href="https://maps.app.goo.gl/yuDRYaELBkz27Sof6"
+                    target="_blank"
+                    className="flex text-lg items-center mt-2 gap-2"
+                  >
+                    <Image
+                      alt="hero"
+                      height={100}
+                      width={100}
+                      className="size-8 rounded-full"
+                      src={"/Google.webp"}
+                    />
+                    <p>500+ reviews</p>
+                  </a>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-600">3+</div>
@@ -214,13 +230,13 @@ const ModernNailsLanding = () => {
             <div className="relative">
               <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
                 {/* Main hand image container */}
-                <div className="w-full h-[500px] bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl flex items-center justify-center overflow-hidden shadow-2xl">
+                <div className="w-full h-[500px] max-sm:h-[350px] flex items-center justify-center overflow-hidden border-b border-gray-300">
                   <div className="text-center text-gray-500">
                     <Image
                       alt="hero"
                       height={500}
                       width={500}
-                      src={'/hand.webp'}
+                      src={"/hand.webp"}
                     />
                   </div>
                 </div>
@@ -235,7 +251,7 @@ const ModernNailsLanding = () => {
       </main>
 
       {/* Services Section */}
-      <section className="py-20 bg-white/50 backdrop-blur-sm">
+      <section id="services" className="py-20 bg-white/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-4xl font-bold text-gray-800 mb-4">
@@ -251,19 +267,23 @@ const ModernNailsLanding = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+                className="bg-white rounded-2xl p-6 hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-200"
               >
                 <div className="text-center">
                   <h4 className="text-xl font-semibold text-gray-800 mb-2">
                     {service.name}
                   </h4>
-                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                  <p className="text-3xl font-bold text-purple-600 mb-2">
                     {service.price}
-                  </div>
+                  </p>
                   <div className="text-gray-600 mb-4">{service.duration}</div>
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-full hover:shadow-lg transition-all duration-300">
+                  <a
+                    href="https://cal.com/dtdigital/30min"
+                    target="_blank"
+                    className="px-4 w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-full hover:shadow-lg transition-all duration-300"
+                  >
                     Book Now
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -277,7 +297,7 @@ const ModernNailsLanding = () => {
           <div className="grid md:grid-cols-3 gap-12">
             {/* Expert Nail Artists */}
             <div className="text-center space-y-6 group">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 ">
                 <User size={36} className="text-purple-600" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800">
@@ -292,7 +312,7 @@ const ModernNailsLanding = () => {
 
             {/* Quality Services */}
             <div className="text-center space-y-6 group">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 ">
                 <Award size={36} className="text-purple-600" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800">
@@ -306,7 +326,7 @@ const ModernNailsLanding = () => {
 
             {/* Organic Nail Products */}
             <div className="text-center space-y-6 group">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 ">
                 <Sparkles size={36} className="text-purple-600" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800">
@@ -322,7 +342,10 @@ const ModernNailsLanding = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
+      <section
+        id="testimonials"
+        className="py-20 bg-gradient-to-r from-purple-50 to-pink-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-4xl font-bold text-gray-800 mb-4">
@@ -337,7 +360,7 @@ const ModernNailsLanding = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -358,10 +381,37 @@ const ModernNailsLanding = () => {
             ))}
           </div>
         </div>
+
+        <div className="mx-auto flex justify-center">
+          <a
+            href="https://maps.app.goo.gl/yuDRYaELBkz27Sof6"
+            target="_blank"
+            className="mt-12 text-center inline-block"
+          >
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                size={20}
+                className="inline fill-yellow-400 text-yellow-400"
+              />
+            ))}
+
+            <div className="flex text-lg items-center mt-2 gap-2">
+              <Image
+                alt="hero"
+                height={100}
+                width={100}
+                className="size-8 rounded-full"
+                src={"/Google.webp"}
+              />
+              <p>500+ reviews</p>
+            </div>
+          </a>
+        </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
+      <footer id="contact" className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
@@ -375,53 +425,15 @@ const ModernNailsLanding = () => {
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-                  <Instagram size={20} />
+                  <FaInstagram size={20} />
                 </div>
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-                  <Facebook size={20} />
+                  <FaFacebook size={20} />
                 </div>
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-                  <Twitter size={20} />
+                  <FaTwitter size={20} />
                 </div>
               </div>
-            </div>
-
-            <div>
-              <h5 className="text-lg font-semibold mb-4">Quick Links</h5>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <a
-                    href="#about"
-                    className="hover:text-purple-400 transition-colors"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    className="hover:text-purple-400 transition-colors"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#gallery"
-                    className="hover:text-purple-400 transition-colors"
-                  >
-                    Gallery
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    className="hover:text-purple-400 transition-colors"
-                  >
-                    Contact
-                  </a>
-                </li>
-              </ul>
             </div>
 
             <div>
@@ -429,11 +441,11 @@ const ModernNailsLanding = () => {
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-center">
                   <Phone size={16} className="mr-3" />
-                  <span>+31 20 123 4567</span>
+                  <span>+31 0622558806</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin size={16} className="mr-3" />
-                  <span>Amsterdam, Netherlands</span>
+                  <span>Naaldwijkseweg 6, 2691 RH 's-Gravenzande</span>
                 </div>
               </div>
             </div>
