@@ -18,6 +18,7 @@ import Image from "next/image";
 const ModernNailsLanding = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const bookingUrl = "https://twin-nailtechs.salonized.com/widget_bookings/new";
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -86,9 +87,9 @@ const ModernNailsLanding = () => {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              N
+              Twin N
               <span className="inline-block w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mx-1 animate-pulse"></span>
-              il Saloon
+              il Tech
             </h1>
           </div>
 
@@ -105,7 +106,7 @@ const ModernNailsLanding = () => {
               </a>
             ))}
             <a
-              href="https://cal.com/dtdigital/30min"
+              href={bookingUrl}
               target="_blank"
               className="bg-gradient-to-r hover:from-purple-300 from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium"
             >
@@ -176,7 +177,7 @@ const ModernNailsLanding = () => {
 
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://cal.com/dtdigital/30min"
+                  href={bookingUrl}
                   target="_blank"
                   className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer hover:from-purple-300 flex items-center"
                 >
@@ -278,7 +279,7 @@ const ModernNailsLanding = () => {
                   </p>
                   <div className="text-gray-600 mb-4">{service.duration}</div>
                   <a
-                    href="https://cal.com/dtdigital/30min"
+                    href={bookingUrl}
                     target="_blank"
                     className="px-4 w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-full hover:shadow-lg transition-all duration-300"
                   >
@@ -409,6 +410,72 @@ const ModernNailsLanding = () => {
           </a>
         </div>
       </section>
+      <section className="py-20" id="gallery">
+        <div className="text-center mb-16">
+          <h3 className="text-4xl font-bold text-gray-800 mb-4">Gallery</h3>
+          <p className="text-xl text-gray-600">Our latest piece</p>
+        </div>
+        <div className="lg:max-w-2/4 mx-auto grid grid-cols-3 bg-white">
+          <div className="p-8 flex items-center justify-center">
+            <Image
+              className="object-none"
+              width={200}
+              height={200}
+              src="/leaf.avif"
+              alt="hero"
+            />
+          </div>
+          <Image
+            className="object-cover w-full"
+            width={400}
+            height={400}
+            src="/1.png"
+            alt="hero"
+          />
+          <div className="p-8 flex items-center justify-center">
+            <Image
+              className="object-none transform -scale-x-100"
+              width={200}
+              height={200}
+              src="/leaf.avif"
+              alt="hero"
+            />
+          </div>
+          <Image
+            className="object-cover w-full"
+            width={400}
+            height={400}
+            src="/2.png"
+            alt="hero"
+          />
+          <div className="p-8 flex items-center justify-center">
+            <Image
+              className="object-none transform rotate-180"
+              width={200}
+              height={200}
+              src="/leaf.avif"
+              alt="hero"
+            />
+          </div>
+          <Image
+            className="object-cover w-full"
+            width={400}
+            height={400}
+            src="/3.png"
+            alt="hero"
+          />
+        </div>
+        <div className="text-center">
+          <a
+            href="https://www.instagram.com/twin.nailtech/"
+            target="_blank"
+            className="mt-8 inline-flex mx-auto border-transparent bg-gradient-to-r from-purple-500 to-pink-500 cursor-pointer text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-lg hover:scale-110  transition-all duration-300 items-center"
+          >
+            <FaInstagram size={30} className="mr-2" />
+            More on Instagram
+          </a>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer id="contact" className="bg-gray-900 text-white py-16">
@@ -416,20 +483,24 @@ const ModernNailsLanding = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
               <h4 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Nail Saloon
+                Twin Nail Tech
               </h4>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Your premier destination for luxury nail care and stunning nail
-                art. Book your appointment today and treat yourself to the
-                pampering you deserve.
+                Your destination for premium nail care and stunning nail art.
+                Book your appointment today and treat yourself to the pampering
+                you deserve.
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
                   <FaInstagram size={20} />
                 </div>
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                <a
+                  href="https://www.facebook.com/nailsbynailsaloon/"
+                  target="_blank"
+                  className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer"
+                >
                   <FaFacebook size={20} />
-                </div>
+                </a>
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
                   <FaTwitter size={20} />
                 </div>
