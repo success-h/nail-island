@@ -19,6 +19,7 @@ const ModernNailsLanding = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const bookingUrl = "https://twin-nailtechs.salonized.com/widget_bookings/new";
+  const phoneNumber = "+310638666118";
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -185,7 +186,7 @@ const ModernNailsLanding = () => {
                   BOOK APPOINTMENT
                 </a>
                 <a
-                  href="https://wa.me/+310622558806"
+                  href={`https://wa.me/${phoneNumber}`}
                   target="_blank"
                   className="border-2 border-gray-300 cursor-pointer text-gray-700 px-8 py-4 rounded-full text-lg font-medium hover:border-purple-600 hover:text-purple-600 transition-all duration-300 flex items-center"
                 >
@@ -512,11 +513,11 @@ const ModernNailsLanding = () => {
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-center">
                   <Phone size={16} className="mr-3" />
-                  <span>+31 0622558806</span>
+                  <span>+31 {phoneNumber.replace("+31", "")}</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin size={16} className="mr-3" />
-                  <span>Naaldwijkseweg 6, 2691 RH 's-Gravenzande</span>
+                  <span>Stadhouderslaan 9, 2517 HV Den Haag</span>
                 </div>
               </div>
             </div>
