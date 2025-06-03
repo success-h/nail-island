@@ -86,9 +86,9 @@ const ModernNailsLanding = () => {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Super N
+              N
               <span className="inline-block w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mx-1 animate-pulse"></span>
-              ils
+              il Saloon
             </h1>
           </div>
 
@@ -169,7 +169,7 @@ const ModernNailsLanding = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-600 font-sans leading-relaxed max-w-lg">
-                  Experience luxury nail care with our expert artists using
+                  Experience the best nail care with our expert artists using
                   premium, eco-friendly products in a relaxing atmosphere.
                 </p>
               </div>
@@ -416,7 +416,7 @@ const ModernNailsLanding = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
               <h4 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Super Nails
+                Nail Saloon
               </h4>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Your premier destination for luxury nail care and stunning nail
@@ -452,7 +452,7 @@ const ModernNailsLanding = () => {
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Super Nails. All rights reserved.</p>
+            <p>&copy; 2025 Nails Saloon. All rights reserved.</p>
           </div>
         </div>
       </footer>
