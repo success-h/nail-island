@@ -96,16 +96,18 @@ const ModernNailsLanding = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {["Services", "Testimonials", "Gallery", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium relative group"
-              >
-                {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
+            {["Services", "Testimonials", "Gallery", "Shop", "Contact"].map(
+              (item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium relative group"
+                >
+                  {item}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ),
+            )}
             <a
               href={bookingUrl}
               target="_blank"
@@ -135,16 +137,18 @@ const ModernNailsLanding = () => {
           }`}
         >
           <div className="px-4 py-6 space-y-4">
-            {["About", "Services", "Gallery", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="block py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item}
-              </a>
-            ))}
+            {["Services", "Testimonials", "Gallery", "Shop", "Contact"].map(
+              (item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="block py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item}
+                </a>
+              ),
+            )}
             <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 font-medium">
               Book Now
             </button>
@@ -478,8 +482,106 @@ const ModernNailsLanding = () => {
         </div>
       </section>
 
+      <section className="py-20" id="shop">
+        <div className="text-center mb-16">
+          <h3 className="text-4xl font-bold text-gray-800 mb-4">Shop</h3>
+        </div>
+        <div className="container max-sm:px-4 mx-auto grid gap-4 xl:grid-cols-4 md:grid-cols-2">
+          <div className="border-pink-100 border">
+            <Image
+              className="object-cover w-full"
+              width={400}
+              height={400}
+              src="/product-1.webp"
+              alt="hero"
+            />
+            <div className="text-center p-4">
+              <p className="text-3xl font-bold italic font-mono">
+                199 Luscious Red
+              </p>
+              <p className="uppercase my-2">rode gellak - 15 ml</p>
+              <p className="font-bold">€ 14,00</p>
+              <button className="mt-2 py-2 px-4 border border-gray-400">
+                Buy now
+              </button>
+            </div>
+          </div>
+          <div className="border-pink-100 border">
+            <Image
+              className="object-cover w-full"
+              width={400}
+              height={400}
+              src="/product-2.webp"
+              alt="hero"
+            />
+            <div className="text-center p-4">
+              <p className="text-3xl font-bold italic font-mono">
+                Lipstack Red
+              </p>
+              <p className="uppercase my-2">rode gellak - 15 ml</p>
+              <p className="font-bold">€ 14,00</p>
+              <button className="mt-2 py-2 px-4 border border-gray-400">
+                Buy now
+              </button>
+            </div>
+          </div>
+          <div className="border-pink-100 border">
+            <Image
+              className="object-cover w-full"
+              width={400}
+              height={400}
+              src="/product-3.webp"
+              alt="hero"
+            />
+            <div className="text-center p-4">
+              <p className="text-3xl font-bold italic font-mono">
+                316 Jungle Green
+              </p>
+              <p className="uppercase my-2">rode gellak - 15 ml</p>
+              <p className="font-bold">€ 14,00</p>
+              <button className="mt-2 py-2 px-4 border border-gray-400">
+                Buy now
+              </button>
+            </div>
+          </div>
+          <div className="border-pink-100 border">
+            <Image
+              className="object-cover w-full"
+              width={400}
+              height={400}
+              src="/product-4.webp"
+              alt="hero"
+            />
+            <div className="text-center p-4">
+              <p className="text-3xl font-bold italic font-mono">
+                271 Palmbeach Green
+              </p>
+              <p className="uppercase my-2">rode gellak - 15 ml</p>
+              <p className="font-bold">€ 14,00</p>
+              <button className="mt-2 py-2 px-4 border border-gray-400">
+                Buy now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="pt-20">
+        <div className="text-center mb-16">
+          <h3 className="text-4xl font-bold text-gray-800">Contact</h3>
+        </div>
+        <a href="https://maps.app.goo.gl/ka3bJrMHmJXmUzbe6" target="_blank">
+          <Image
+            width={2000}
+            height={400}
+            className="object-cover max-lg:scale-200 hover:scale-105 w-full transition-all duration-300"
+            src="/location.png"
+            alt="address"
+          />
+        </a>
+      </section>
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 text-white py-16">
+      <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
