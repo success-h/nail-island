@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { SectionProps } from "@/app/[lang]/dictionaries";
-import React, { useState, useEffect } from "react";
+import { SectionProps } from '@/app/[lang]/dictionaries';
+import React, { useState, useEffect } from 'react';
 import {
   Menu,
   X,
@@ -13,36 +13,36 @@ import {
   MapPin,
   ChevronDown,
   Check,
-} from "lucide-react";
-import { FaWhatsapp, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+} from 'lucide-react';
+import { FaWhatsapp, FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
+import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
-import { Button } from "./ui/button";
-import { useLanguage } from "@/app/context/LanguageContext";
+} from '@/components/ui/dialog';
+import { Button } from './ui/button';
+import { useLanguage } from '@/app/context/LanguageContext';
 
-const SUPPORTED_LANGUAGES = ["en", "es", "nl"];
+const SUPPORTED_LANGUAGES = ['en', 'es', 'nl'];
 
 export default function Main({ dict }: SectionProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [showModal, setShowModal] = useState(false);
-  const bookingUrl = "https://twin-nailtechs.salonized.com/widget_bookings/new";
-  const phoneNumber = "+310638666118";
+  const bookingUrl = 'https://twin-nailtechs.salonized.com/widget_bookings/new';
+  const phoneNumber = '+310638666118';
   const pathname = usePathname();
   const router = useRouter();
   const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleMobileMenu = () => {
@@ -50,7 +50,7 @@ export default function Main({ dict }: SectionProps) {
   };
 
   const handleLanguageChange = (lang: string) => {
-    const segments = pathname.split("/");
+    const segments = pathname.split('/');
 
     if (SUPPORTED_LANGUAGES.includes(segments[1])) {
       segments[1] = lang;
@@ -58,8 +58,8 @@ export default function Main({ dict }: SectionProps) {
       segments.splice(1, 0, lang);
     }
 
-    const newPath = segments.join("/") || "/";
-    localStorage.setItem("preferredLanguage", lang);
+    const newPath = segments.join('/') || '/';
+    localStorage.setItem('preferredLanguage', lang);
     //@ts-expect-error error
     setLanguage(lang);
     router.push(newPath);
@@ -78,32 +78,35 @@ export default function Main({ dict }: SectionProps) {
             </DialogDescription>
             <div className="mx-auto my-4 flex gap-4">
               <Button
-                onClick={() => handleLanguageChange("en")}
-                className={`cursor-pointer ${language === "en" ? "bg-emerald-500 px-8 py-2" : "bg-white"
-                  }`}
+                onClick={() => handleLanguageChange('en')}
+                className={`cursor-pointer ${
+                  language === 'en' ? 'bg-emerald-500 px-8 py-2' : 'bg-white'
+                }`}
                 variant="outline"
               >
-                🇺🇸 English {language === "en" && <Check />}
+                🇺🇸 English {language === 'en' && <Check />}
               </Button>
               <Button
-                onClick={() => handleLanguageChange("es")}
-                className={`cursor-pointer ${language === "es"
-                    ? "bg-emerald-500 px-8 py-2"
-                    : "bg-white text-black"
-                  }`}
+                onClick={() => handleLanguageChange('es')}
+                className={`cursor-pointer ${
+                  language === 'es'
+                    ? 'bg-emerald-500 px-8 py-2'
+                    : 'bg-white text-black'
+                }`}
                 variant="outline"
               >
-                Spainish 🇪🇸{language === "es" && <Check />}
+                Spainish 🇪🇸{language === 'es' && <Check />}
               </Button>
               <Button
-                onClick={() => handleLanguageChange("nl")}
-                className={`cursor-pointer ${language === "nl"
-                    ? "bg-emerald-500 px-8 py-2"
-                    : "bg-white text-black"
-                  }`}
+                onClick={() => handleLanguageChange('nl')}
+                className={`cursor-pointer ${
+                  language === 'nl'
+                    ? 'bg-emerald-500 px-8 py-2'
+                    : 'bg-white text-black'
+                }`}
                 variant="outline"
               >
-                🇳🇱 Dutch {language === "nl" && <Check />}
+                🇳🇱 Dutch {language === 'nl' && <Check />}
               </Button>
             </div>
           </DialogHeader>
@@ -129,10 +132,11 @@ export default function Main({ dict }: SectionProps) {
 
       {/* Navigation */}
       <nav
-        className={`fixed w-full z-50 px-4 sm:px-6 lg:px-8 py-4 transition-all duration-300 ${scrollY > 50
-            ? "bg-white/80 backdrop-blur-md shadow-lg"
-            : "bg-transparent"
-          }`}
+        className={`fixed w-full z-50 px-4 sm:px-6 lg:px-8 py-4 transition-all duration-300 ${
+          scrollY > 50
+            ? 'bg-white/80 backdrop-blur-md shadow-lg'
+            : 'bg-transparent'
+        }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
@@ -149,7 +153,7 @@ export default function Main({ dict }: SectionProps) {
             {dict.navigation.map((item) => (
               <a
                 key={item.link}
-                href={`#${item.link}`}
+                href={`${item.link}`}
                 className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium relative group"
               >
                 {item.name}
@@ -163,11 +167,11 @@ export default function Main({ dict }: SectionProps) {
             >
               {dict.navigation[5].name}
             </a>
-            <Button variant={"ghost"} onClick={() => setShowModal(true)}>
+            <Button variant={'ghost'} onClick={() => setShowModal(true)}>
               <div className="cursor-pointer py-1 flex items-center text-lg uppercase border border-black px-4 rounded-full bg-transparent">
-                {language === "en" ? "🇺🇸" : language === "es" ? "🇪🇸" : "🇳🇱"}{" "}
+                {language === 'en' ? '🇺🇸' : language === 'es' ? '🇪🇸' : '🇳🇱'}{' '}
                 {language}
-                <ChevronDown />{" "}
+                <ChevronDown />{' '}
               </div>
             </Button>
           </div>
@@ -185,16 +189,17 @@ export default function Main({ dict }: SectionProps) {
 
         {/* Mobile Navigation */}
         <div
-          className={`lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300 ${isMobileMenuOpen
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 -translate-y-4 pointer-events-none"
-            }`}
+          className={`lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300 ${
+            isMobileMenuOpen
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 -translate-y-4 pointer-events-none'
+          }`}
         >
           <div className="px-4 py-6 space-y-4">
             {dict.navigation.map((item) => (
               <a
                 key={item.link}
-                href={`#${item.link}`}
+                href={`${item.link}`}
                 className="block py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -271,7 +276,7 @@ export default function Main({ dict }: SectionProps) {
                       height={100}
                       width={100}
                       className="size-8 rounded-full"
-                      src={"/Google.webp"}
+                      src={'/Google.webp'}
                     />
                     <p> {dict.hero.reviews}</p>
                   </a>
@@ -430,7 +435,7 @@ export default function Main({ dict }: SectionProps) {
                 height={100}
                 width={100}
                 className="size-8 rounded-full"
-                src={"/Google.webp"}
+                src={'/Google.webp'}
               />
               <p>{dict.testimonial.review}</p>
             </div>
