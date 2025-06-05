@@ -1,13 +1,13 @@
-'use client';
+"use client";
 import {
   createContext,
   useState,
   useEffect,
   useContext,
   ReactNode,
-} from 'react';
+} from "react";
 
-type Language = 'nl' | 'en' | 'es';
+type Language = "nl" | "en" | "es";
 
 interface LanguageContextProps {
   language: Language;
@@ -15,19 +15,20 @@ interface LanguageContextProps {
 }
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(
-  undefined
+  undefined,
 );
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguageState] = useState<Language>('nl');
+  const [language, setLanguageState] = useState<Language>("nl");
 
   useEffect(() => {
-    const storedLang = localStorage.getItem('lang') as Language;
+    const storedLang = localStorage.getItem("lang") as Language;
+    if (!storedLang) localStorage.setItem("lang", language);
     if (storedLang) setLanguageState(storedLang);
-  }, []);
+  }, [language]);
 
   const setLanguage = (lang: Language) => {
-    localStorage.setItem('lang', lang);
+    localStorage.setItem("lang", lang);
     setLanguageState(lang);
   };
 
@@ -41,6 +42,6 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (!context)
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error("useLanguage must be used within a LanguageProvider");
   return context;
 };
