@@ -447,7 +447,7 @@ export default function Main({ dict }: SectionProps) {
         <div className="lg:max-w-2/4 mx-auto grid grid-cols-3 bg-white">
           <div className="p-8 flex items-center justify-center">
             <Image
-              className="object-none"
+              className="object-none max-md:object-contain"
               width={200}
               height={200}
               src="/leaf.avif"
@@ -463,7 +463,7 @@ export default function Main({ dict }: SectionProps) {
           />
           <div className="p-8 flex items-center justify-center">
             <Image
-              className="object-none transform -scale-x-100"
+              className="object-none max-md:object-contain transform -scale-x-100"
               width={200}
               height={200}
               src="/leaf.avif"
@@ -479,7 +479,7 @@ export default function Main({ dict }: SectionProps) {
           />
           <div className="p-8 flex items-center justify-center">
             <Image
-              className="object-none transform rotate-180"
+              className="object-none transform max-md:object-contain rotate-180"
               width={200}
               height={200}
               src="/leaf.avif"
