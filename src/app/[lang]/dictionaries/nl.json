@@ -27,10 +27,10 @@
   ],
   "hero": {
     "hero_img": "/hand.webp",
-    "deal": "Aanbieding van de dag - 20% korting op Nagel Versterking!",
-    "title": "Verwên Uw",
+    "deal": "Deal van de dag - 20% korting op nagelverbetering!",
+    "title": "Verwen uw",
     "sub_title": "Nagels",
-    "description": "Ervaar de beste nagelzorg met onze expertkunstenaars die premium, milieuvriendelijke producten gebruiken in een ontspannen sfeer.",
+    "description": "Ervaar de beste nagelverzorging met onze deskundige artiesten die eersteklas, milieuvriendelijke producten gebruiken in een ontspannen sfeer.",
     "btn1": "AFSPRAAK MAKEN",
     "btn2": "Bel Ons",
     "reviews": "500+ beoordelingen",
@@ -39,13 +39,9 @@
     "title1": "Twin N",
     "title2": "agel Tech"
   },
-  "about": {
-    "title": "Over Ons",
-    "desc": "Twin Nail Tech, opgericht in 2019, staat bekend als een van de beste nagelstudio's in Den Haag, met professionele nageltechnici die uw ideeën met de grootste precisie vormgeven. Wij geloven dat nagels uitdrukken wat woorden vaak niet kunnen. Daarom richten wij ons op het vastleggen van uw verhaal, expressie, overtuigingen en essentie om uw verhaal prachtig te verbeelden. Ons bekroonde team van nagelkunstenaars blinkt uit in het creëren van gepersonaliseerde, creatieve nagelkunst die diep resoneert met onze klanten. Ons succes komt voort uit het begrijpen van de wensen van onze klanten en het leveren van uitzonderlijke resultaten, waarbij elk kunstwerk een blijvende glimlach achterlaat. Passie drijft onze kunstenaars om stukken te creëren die echt resoneren, zodat elke klant vertrekt met nagels waar ze van houden. Deze toewijding aan excellentie definieert onze reis en maakt Twin Nail Tech een bestemming voor degenen die niet alleen nagelzorg zoeken, maar een artistieke ervaring die met zorg en expertise is gemaakt."
-  },
   "service": {
     "title": "Onze Diensten",
-    "description": "Van klassieke manicures tot ingewikkelde nagelkunst, wij bieden premium diensten op maat van uw stijl.",
+    "description": "Van klassieke manicure tot ingewikkelde nail art, wij bieden eersteklas diensten op maat van jouw stijl.",
     "services": [
       {
         "name": "Klassieke Manicure",
@@ -136,7 +132,7 @@
   "contact": "Contact",
   "footer": {
     "title": "Twin Nail Tech",
-    "desc": "Uw bestemming voor premium nagelzorg en prachtige nagelkunst. Boek vandaag nog uw afspraak en trakteer uzelf op de verwennerij die u verdient.",
+    "desc": "Jouw bestemming voor eersteklas nagelverzorging en prachtige nail art. Maak vandaag nog een afspraak en trakteer jezelf op de verwennerij die je verdient.",
     "contact_info": {
       "title": "Contactgegevens",
       "phone": "+31 0638666118",
