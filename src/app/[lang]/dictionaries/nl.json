@@ -1,0 +1,169 @@
+{
+  "navigation": [
+    {
+      "name": "Diensten",
+      "link": "#services"
+    },
+    {
+      "name": "Getuigenissen",
+      "link": "#testimonials"
+    },
+    {
+      "name": "Galerij",
+      "link": "#gallery"
+    },
+    {
+      "name": "Winkel",
+      "link": "#shop"
+    },
+    {
+      "name": "Contact",
+      "link": "#contact"
+    },
+    {
+      "name": "Nu Boeken",
+      "link": "#book"
+    }
+  ],
+  "hero": {
+    "hero_img": "/hand.webp",
+    "deal": "Aanbieding van de dag - 20% korting op Nagel Versterking!",
+    "title": "Verwên Uw",
+    "sub_title": "Nagels",
+    "description": "Ervaar de beste nagelzorg met onze expertkunstenaars die premium, milieuvriendelijke producten gebruiken in een ontspannen sfeer.",
+    "btn1": "AFSPRAAK MAKEN",
+    "btn2": "Bel Ons",
+    "reviews": "500+ beoordelingen",
+    "experience_year": "3",
+    "exp": "Jaar Ervaring",
+    "title1": "Twin N",
+    "title2": "agel Tech"
+  },
+  "about": {
+    "title": "Over Ons",
+    "desc": "Twin Nail Tech, opgericht in 2019, staat bekend als een van de beste nagelstudio's in Den Haag, met professionele nageltechnici die uw ideeën met de grootste precisie vormgeven. Wij geloven dat nagels uitdrukken wat woorden vaak niet kunnen. Daarom richten wij ons op het vastleggen van uw verhaal, expressie, overtuigingen en essentie om uw verhaal prachtig te verbeelden. Ons bekroonde team van nagelkunstenaars blinkt uit in het creëren van gepersonaliseerde, creatieve nagelkunst die diep resoneert met onze klanten. Ons succes komt voort uit het begrijpen van de wensen van onze klanten en het leveren van uitzonderlijke resultaten, waarbij elk kunstwerk een blijvende glimlach achterlaat. Passie drijft onze kunstenaars om stukken te creëren die echt resoneren, zodat elke klant vertrekt met nagels waar ze van houden. Deze toewijding aan excellentie definieert onze reis en maakt Twin Nail Tech een bestemming voor degenen die niet alleen nagelzorg zoeken, maar een artistieke ervaring die met zorg en expertise is gemaakt."
+  },
+  "service": {
+    "title": "Onze Diensten",
+    "description": "Van klassieke manicures tot ingewikkelde nagelkunst, wij bieden premium diensten op maat van uw stijl.",
+    "services": [
+      {
+        "name": "Klassieke Manicure",
+        "price": "€35",
+        "duration": "45 min",
+        "book": "Nu Boeken"
+      },
+      {
+        "name": "Gel Manicure",
+        "price": "€50",
+        "duration": "60 min",
+        "book": "Nu Boeken"
+      },
+      {
+        "name": "Nagelkunst Ontwerp",
+        "price": "€65",
+        "duration": "90 min",
+        "book": "Nu Boeken"
+      },
+      {
+        "name": "Acryl Extensies",
+        "price": "€70",
+        "duration": "120 min",
+        "book": "Nu Boeken"
+      }
+    ]
+  },
+  "shop": {
+    "title": "Winkel",
+    "items": [
+      {
+        "name": "199 Weelderig Rood",
+        "price": "14,00",
+        "des": "rode gellak - 15 ml",
+        "book": "Nu Kopen",
+        "image": "/product-1.webp"
+      },
+      {
+        "name": "Lipstick Rood",
+        "price": "14,00",
+        "des": "rode gellak - 15 ml",
+        "book": "Nu Kopen",
+        "image": "/product-2.webp"
+      },
+      {
+        "name": "316 Jungle Groen",
+        "price": "14,00",
+        "des": "groene gellak - 15 ml",
+        "book": "Nu Kopen",
+        "image": "/product-3.webp"
+      },
+      {
+        "name": "271 Palmbeach Groen",
+        "price": "14,00",
+        "des": "groene gellak - 15 ml",
+        "book": "Nu Kopen",
+        "image": "/product-4.webp"
+      }
+    ]
+  },
+  "feature": [
+    {
+      "name": "Expert Nagelkunstenaars",
+      "description": "Onze nagelkunstenaars zijn gediplomeerde technici met jarenlange ervaring en artistieke flair, die elke keer perfecte resultaten garanderen."
+    },
+    {
+      "name": "Premium Ervaring",
+      "description": "Ontspan in onze luxueuze salonsfeer ontworpen voor comfort en rust terwijl u eersteklas nagelzorg diensten ontvangt."
+    },
+    {
+      "name": "Milieuvriendelijke Producten",
+      "description": "Wij gebruiken alleen veganistische, diervriendelijke en milieubewuste producten die zacht zijn voor uw nagels en de planeet."
+    }
+  ],
+  "gallery": {
+    "title": "Galerij",
+    "desc": "Ons nieuwste werk",
+    "see_more": "Meer op Instagram",
+    "images": [
+      "/leaf.avif",
+      "/1.png",
+      "/leaf.avif",
+      "/2.png",
+      "/leaf.avif",
+      "/3.png"
+    ]
+  },
+  "contact": "Contact",
+  "footer": {
+    "title": "Twin Nail Tech",
+    "desc": "Uw bestemming voor premium nagelzorg en prachtige nagelkunst. Boek vandaag nog uw afspraak en trakteer uzelf op de verwennerij die u verdient.",
+    "contact_info": {
+      "title": "Contactgegevens",
+      "phone": "+31 0638666118",
+      "address": "Stadhouderslaan 9, 2517 HV Den Haag"
+    },
+    "all_rights": "© 2025 Twin Nail Tech. Alle rechten voorbehouden."
+  },
+  "testimonial": {
+    "title": "Wat Onze Klanten Zeggen",
+    "desc": "Echte beoordelingen van tevreden klanten",
+    "review": "500+ beoordelingen",
+    "testimonies": [
+      {
+        "name": "Sarah M.",
+        "rating": 5,
+        "text": "Absoluut prachtig werk! Mijn nagels hebben er nog nooit zo goed uitgezien."
+      },
+      {
+        "name": "Jessica L.",
+        "rating": 5,
+        "text": "De aandacht voor detail is ongelooflijk. Zeer aan te bevelen!"
+      },
+      {
+        "name": "Emma K.",
+        "rating": 5,
+        "text": "Zo'n ontspannende ervaring met elke keer geweldige resultaten."
+      }
+    ]
+  }
+}

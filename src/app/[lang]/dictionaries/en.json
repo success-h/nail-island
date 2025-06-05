@@ -1,0 +1,171 @@
+{
+  "navigation": [
+    {
+      "name": "Services",
+      "link": "#services"
+    },
+    {
+      "name": "Testimonials",
+      "link": "#testimonials"
+    },
+    {
+      "name": "Gallery",
+      "link": "#gallery"
+    },
+    {
+      "name": "Shop",
+      "link": "#shop"
+    },
+    {
+      "name": "Contact",
+      "link": "#contact"
+    },
+    {
+      "name": "Book Now",
+      "link": "#book"
+    }
+  ],
+  "hero": {
+    "hero_img": "/hand.webp",
+    "deal": "Deal of the day - 20% off Nail Enhancement!",
+    "title": "Pamoper Your",
+    "sub_title": "Nails",
+    "description": "Experience the best nail care with our expert artists using premium, eco-friendly products in a relaxing atmosphere.",
+    "btn1": "BOOK APPOINTMENT",
+    "btn2": "Call Us",
+    "reviews": "500+ reviews",
+    "experience_year": "3",
+    "exp": "Years Experience",
+    "title1": "Twin N",
+    "title2": "il Tech"
+  },
+  "about": {
+    "title": "About Us",
+    "desc": "Robins Tattoo Studio, established in 2019, stands as one of the best tattoo studios in Ahmedabad, with a professional tattoo artist who designs your ideas with the utmost precision. We believe that tattoos express what words often cannot. That's why we focus on capturing your story, expression, beliefs, and essence to ink down your story beautifully. Our award-winning team of tattoo artists excels in crafting personalized, creative tattoos that resonate deeply with our clients. Our success stems from understanding our client's desires and delivering exceptional results, ensuring every artwork leaves a lasting smile. Passion drives our artists to create pieces that truly resonate, ensuring each client leaves with a tattoo they love. This commitment to excellence defines our journey, making Robins Tattoo Studio a destination for those seeking not just a tattoo but an artistic experience crafted with care and expertise."
+  },
+  "service": {
+    "title": "Our Services",
+    "description": "From classic manicures to intricate nail art, we offer premium services tailored to your style.",
+    "services": [
+      {
+        "name": "Classic Manicure",
+        "price": "€35",
+        "duration": "45 min",
+        "book": "Book Now"
+      },
+      {
+        "name": "Gel Manicure",
+        "price": "€50",
+        "duration": "60 min",
+        "book": "Book Now"
+      },
+      {
+        "name": "Nail Art Design",
+        "price": "€65",
+        "duration": "90 min",
+        "book": "Book Now"
+      },
+      {
+        "name": "Acrylic Extensions",
+        "price": "€70",
+        "duration": "120 min",
+        "book": "Book Now"
+      }
+    ]
+  },
+  "shop": {
+    "title": "Shop",
+    "items": [
+      {
+        "name": "199 Luscious Red",
+        "price": "14,00",
+        "des": "rode gellak - 15 ml",
+        "book": "Buy Now",
+        "image": "/product-1.webp"
+      },
+      {
+        "name": "Lipstack Red",
+        "price": "14,00",
+        "des": "rode gellak - 15 ml",
+        "book": "Buy Now",
+        "image": "/product-2.webp"
+      },
+      {
+        "name": "316 Jungle Green",
+        "price": "14,00",
+        "des": "rode gellak - 15 ml",
+        "book": "Buy Now",
+        "image": "/product-3.webp"
+      },
+      {
+        "name": "271 Palmbeach Greenß",
+        "price": "14,00",
+        "des": "rode gellak - 15 ml",
+        "book": "Buy Now",
+        "image": "/product-4.webp"
+      }
+    ]
+  },
+  "feature": [
+    {
+      "name": "Expert Nail Artists",
+      "description": "Our nail artists are licensed technicians with years of experience and artistic flair, ensuring perfect results every time."
+    },
+    {
+      "name": "Premium Experience",
+      "description": "Relax in our luxurious salon environment designed for comfort and tranquility while receiving top-tier nail care services."
+    },
+    {
+      "name": "Eco-Friendly Products",
+      "description": "We use only vegan, cruelty-free, and environmentally conscious products that are gentle on your nails and the planet."
+    }
+  ],
+  "gallery": {
+    "title": "Gallery",
+    "desc": "Our latest piece",
+    "see_more": "More on Instagram",
+    "images": [
+      "/leaf.avif",
+      "/1.png",
+      "/leaf.avif",
+      "/2.png",
+      "/leaf.avif",
+      "/3.png"
+    ]
+  },
+  "contact": "Contact",
+  "footer": {
+    "title": "Twin Nail Tech",
+    "desc": "Your destination for premium nail care and stunning nail art. Book your appointment today and treat yourself to the pampering you deserve.",
+    "contact_info": {
+      "title": "Contact Info",
+      "phone": "+31 0638666118",
+      "address": "Stadhouderslaan 9, 2517 HV Den Haag"
+    },
+
+    "all_rights": "© 2025 Twin Nail Tech. All rights reserved."
+  },
+
+  "testimonial": {
+    "title": "What Our Clients Say",
+    "desc": "Real reviews from satisfied customers",
+    "review": "500+ reviews",
+    "testimonies": [
+      {
+        "name": "Sarah M.",
+        "rating": 5,
+        "text": "Absolutely stunning work! My nails have never looked better."
+      },
+      {
+        "name": "Jessica L.",
+        "rating": 5,
+        "text": "The attention to detail is incredible. Highly recommend!"
+      },
+      {
+        "name": "Emma K.",
+        "rating": 5,
+        "text": "Such a relaxing experience with amazing results every time."
+      }
+    ]
+  }
+}

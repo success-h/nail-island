@@ -1,63 +1,124 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
+import { SectionProps } from '@/app/[lang]/dictionaries';
+import React, { useState, useEffect } from 'react';
 import {
   Menu,
   X,
   User,
-  Award,
   Sparkles,
   Star,
   Calendar,
   Phone,
   MapPin,
-} from "lucide-react";
-import { FaWhatsapp, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
-import Image from "next/image";
+  ChevronDown,
+  Check,
+} from 'lucide-react';
+import { FaWhatsapp, FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
+import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { Button } from './ui/button';
+import { useLanguage } from '@/app/context/LanguageContext';
 
-const ModernNailsLanding = () => {
+const SUPPORTED_LANGUAGES = ['en', 'es', 'nl'];
+
+export default function Main({ dict }: SectionProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const bookingUrl = "https://twin-nailtechs.salonized.com/widget_bookings/new";
-  const phoneNumber = "+310638666118";
+  const [showModal, setShowModal] = useState(false);
+  const bookingUrl = 'https://twin-nailtechs.salonized.com/widget_bookings/new';
+  const phoneNumber = '+310638666118';
+  const pathname = usePathname();
+  const router = useRouter();
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const testimonials = [
-    {
-      name: "Sarah M.",
-      rating: 5,
-      text: "Absolutely stunning work! My nails have never looked better.",
-    },
-    {
-      name: "Jessica L.",
-      rating: 5,
-      text: "The attention to detail is incredible. Highly recommend!",
-    },
-    {
-      name: "Emma K.",
-      rating: 5,
-      text: "Such a relaxing experience with amazing results every time.",
-    },
-  ];
+  const handleLanguageChange = (lang: string) => {
+    const segments = pathname.split('/');
 
-  const services = [
-    { name: "Classic Manicure", price: "€35", duration: "45 min" },
-    { name: "Gel Manicure", price: "€50", duration: "60 min" },
-    { name: "Nail Art Design", price: "€65", duration: "90 min" },
-    { name: "Acrylic Extensions", price: "€70", duration: "120 min" },
-  ];
+    if (SUPPORTED_LANGUAGES.includes(segments[1])) {
+      segments[1] = lang;
+    } else {
+      segments.splice(1, 0, lang);
+    }
+
+    const newPath = segments.join('/') || '/';
+    localStorage.setItem('preferredLanguage', lang);
+    //@ts-expect-error error
+    setLanguage(lang);
+    router.push(newPath);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-purple-50 relative overflow-hidden">
+      <Dialog open={showModal} onOpenChange={setShowModal}>
+        <DialogContent className="sm:max-w-[425px] bg-white">
+          <DialogHeader>
+            <DialogTitle className="text-black text-3xl">
+              Select Language
+            </DialogTitle>
+            <DialogDescription>
+              Please select your preferred language
+            </DialogDescription>
+            <div className="mx-auto my-4 flex gap-4">
+              <DialogClose>
+                <Button
+                  onClick={() => handleLanguageChange('en')}
+                  className={`cursor-pointer ${
+                    language === 'en' ? 'bg-emerald-500 px-8 py-2' : 'bg-white'
+                  }`}
+                  variant="outline"
+                >
+                  🇺🇸 English {language === 'en' && <Check />}
+                </Button>
+              </DialogClose>
+              <DialogClose>
+                <Button
+                  onClick={() => handleLanguageChange('es')}
+                  className={`cursor-pointer ${
+                    language === 'es'
+                      ? 'bg-emerald-500 px-8 py-2'
+                      : 'bg-white text-black'
+                  }`}
+                  variant="outline"
+                >
+                  Spainish 🇪🇸{language === 'es' && <Check />}
+                </Button>
+              </DialogClose>
+              <DialogClose>
+                <Button
+                  onClick={() => handleLanguageChange('nl')}
+                  className={`cursor-pointer ${
+                    language === 'nl'
+                      ? 'bg-emerald-500 px-8 py-2'
+                      : 'bg-white text-black'
+                  }`}
+                  variant="outline"
+                >
+                  🇳🇱 Dutch {language === 'nl' && <Check />}
+                </Button>
+              </DialogClose>
+            </div>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -80,41 +141,46 @@ const ModernNailsLanding = () => {
       <nav
         className={`fixed w-full z-50 px-4 sm:px-6 lg:px-8 py-4 transition-all duration-300 ${
           scrollY > 50
-            ? "bg-white/80 backdrop-blur-md shadow-lg"
-            : "bg-transparent"
+            ? 'bg-white/80 backdrop-blur-md shadow-lg'
+            : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Twin N
+              {dict.hero.title1}
               <span className="inline-block w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mx-1 animate-pulse"></span>
-              il Tech
+              {dict.hero.title2}
             </h1>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {["Services", "Testimonials", "Gallery", "Shop", "Contact"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium relative group"
-                >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              ),
-            )}
+            {dict.navigation.map((item) => (
+              <a
+                key={item.link}
+                href={`#${item.link}`}
+                className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium relative group"
+              >
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ))}
             <a
               href={bookingUrl}
               target="_blank"
               className="bg-gradient-to-r hover:from-purple-300 from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium"
             >
-              Book Now
+              {dict.navigation[5].name}
             </a>
+            <Button variant={'ghost'} onClick={() => setShowModal(true)}>
+              <div className="cursor-pointer py-1 flex items-center text-lg uppercase border border-black px-4 rounded-full bg-transparent">
+                {language === 'en' ? '🇺🇸' : language === 'es' ? '🇪🇸' : '🇳🇱'}{' '}
+                {language}
+                <ChevronDown />{' '}
+              </div>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -132,25 +198,23 @@ const ModernNailsLanding = () => {
         <div
           className={`lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300 ${
             isMobileMenuOpen
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 -translate-y-4 pointer-events-none"
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 -translate-y-4 pointer-events-none'
           }`}
         >
           <div className="px-4 py-6 space-y-4">
-            {["Services", "Testimonials", "Gallery", "Shop", "Contact"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="block py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              ),
-            )}
+            {dict.navigation.map((item) => (
+              <a
+                key={item.link}
+                href={`#${item.link}`}
+                className="block py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
             <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 font-medium">
-              Book Now
+              {dict.navigation[5].name}
             </button>
           </div>
         </div>
@@ -165,18 +229,17 @@ const ModernNailsLanding = () => {
               <div className="space-y-6">
                 <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-sm font-medium text-purple-700 mb-4">
                   <Sparkles size={16} className="mr-2" />
-                  Deal of the day - 20% off Nail Enhancement!
+                  {dict.hero.deal}
                 </div>
                 <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-800 via-purple-700 to-pink-700 bg-clip-text text-transparent leading-tight">
-                  Pamper Your
+                  {dict.hero.title}
                   <br />
                   <span className="text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
-                    Nails
+                    {dict.hero.sub_title}
                   </span>
                 </h2>
                 <p className="text-xl text-gray-600 font-sans leading-relaxed max-w-lg">
-                  Experience the best nail care with our expert artists using
-                  premium, eco-friendly products in a relaxing atmosphere.
+                  {dict.hero.description}
                 </p>
               </div>
 
@@ -187,7 +250,7 @@ const ModernNailsLanding = () => {
                   className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer hover:from-purple-300 flex items-center"
                 >
                   <Calendar size={20} className="mr-2" />
-                  BOOK APPOINTMENT
+                  {dict.hero.btn1}
                 </a>
                 <a
                   href={`https://wa.me/${phoneNumber}`}
@@ -195,7 +258,7 @@ const ModernNailsLanding = () => {
                   className="border-2 border-gray-300 cursor-pointer text-gray-700 px-8 py-4 rounded-full text-lg font-medium hover:border-purple-600 hover:text-purple-600 transition-all duration-300 flex items-center"
                 >
                   <FaWhatsapp size={20} className="mr-2" />
-                  Call Us
+                  {dict.hero.btn2}
                 </a>
               </div>
 
@@ -220,14 +283,16 @@ const ModernNailsLanding = () => {
                       height={100}
                       width={100}
                       className="size-8 rounded-full"
-                      src={"/Google.webp"}
+                      src={'/Google.webp'}
                     />
-                    <p>500+ reviews</p>
+                    <p> {dict.hero.reviews}</p>
                   </a>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600">3+</div>
-                  <div className="text-sm text-gray-600">Years Experience</div>
+                  <div className="text-3xl font-bold text-purple-600">
+                    {dict.hero.experience_year}
+                  </div>
+                  <div className="text-sm text-gray-600"> {dict.hero.exp}</div>
                 </div>
               </div>
             </div>
@@ -242,7 +307,7 @@ const ModernNailsLanding = () => {
                       alt="hero"
                       height={500}
                       width={500}
-                      src={"/hand.webp"}
+                      src={dict.hero.hero_img}
                     />
                   </div>
                 </div>
@@ -261,16 +326,15 @@ const ModernNailsLanding = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-4xl font-bold text-gray-800 mb-4">
-              Our Services
+              {dict.service.title}
             </h3>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From classic manicures to intricate nail art, we offer premium
-              services tailored to your style.
+              {dict.service.description}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+            {dict.service.services.map((service, index) => (
               <div
                 key={index}
                 className="bg-white rounded-2xl p-6 hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-200"
@@ -288,7 +352,7 @@ const ModernNailsLanding = () => {
                     target="_blank"
                     className="px-4 w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-full hover:shadow-lg transition-all duration-300"
                   >
-                    Book Now
+                    {service.book}
                   </a>
                 </div>
               </div>
@@ -302,47 +366,19 @@ const ModernNailsLanding = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12">
             {/* Expert Nail Artists */}
-            <div className="text-center space-y-6 group">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 ">
-                <User size={36} className="text-purple-600" />
+            {dict.feature.map((item, index) => (
+              <div key={index} className="text-center space-y-6 group">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 ">
+                  <User size={36} className="text-purple-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800">
+                  {item.name}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  {item.description}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-gray-800">
-                Expert Nail Artists
-              </h3>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Our nail artists are licensed technicians with years of
-                experience and artistic flair, ensuring perfect results every
-                time.
-              </p>
-            </div>
-
-            {/* Quality Services */}
-            <div className="text-center space-y-6 group">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 ">
-                <Award size={36} className="text-purple-600" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800">
-                Premium Experience
-              </h3>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Relax in our luxurious salon environment designed for comfort
-                and tranquility while receiving top-tier nail care services.
-              </p>
-            </div>
-
-            {/* Organic Nail Products */}
-            <div className="text-center space-y-6 group">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 ">
-                <Sparkles size={36} className="text-purple-600" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800">
-                Eco-Friendly Products
-              </h3>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                We use only vegan, cruelty-free, and environmentally conscious
-                products that are gentle on your nails and the planet.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -355,15 +391,13 @@ const ModernNailsLanding = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-4xl font-bold text-gray-800 mb-4">
-              What Our Clients Say
+              {dict.testimonial.title}
             </h3>
-            <p className="text-xl text-gray-600">
-              Real reviews from satisfied customers
-            </p>
+            <p className="text-xl text-gray-600">{dict.testimonial.desc}</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {dict.testimonial.testimonies.map((testimonial, index) => (
               <div
                 key={index}
                 className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300"
@@ -408,17 +442,19 @@ const ModernNailsLanding = () => {
                 height={100}
                 width={100}
                 className="size-8 rounded-full"
-                src={"/Google.webp"}
+                src={'/Google.webp'}
               />
-              <p>500+ reviews</p>
+              <p>{dict.testimonial.review}</p>
             </div>
           </a>
         </div>
       </section>
       <section className="py-20" id="gallery">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-gray-800 mb-4">Gallery</h3>
-          <p className="text-xl text-gray-600">Our latest piece</p>
+          <h3 className="text-4xl font-bold text-gray-800 mb-4">
+            {dict.gallery.title}
+          </h3>
+          <p className="text-xl text-gray-600"> {dict.gallery.desc}</p>
         </div>
         <div className="lg:max-w-2/4 mx-auto grid grid-cols-3 bg-white">
           <div className="p-8 flex items-center justify-center">
@@ -477,98 +513,45 @@ const ModernNailsLanding = () => {
             className="mt-8 inline-flex mx-auto border-transparent bg-gradient-to-r from-purple-500 to-pink-500 cursor-pointer text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-lg hover:scale-110  transition-all duration-300 items-center"
           >
             <FaInstagram size={30} className="mr-2" />
-            More on Instagram
+            {dict.gallery.see_more}
           </a>
         </div>
       </section>
 
       <section className="py-20" id="shop">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-gray-800 mb-4">Shop</h3>
+          <h3 className="text-4xl font-bold text-gray-800 mb-4">
+            {dict.shop.title}
+          </h3>
         </div>
         <div className="container max-sm:px-4 mx-auto grid gap-4 xl:grid-cols-4 md:grid-cols-2">
-          <div className="border-pink-100 border">
-            <Image
-              className="object-cover w-full"
-              width={400}
-              height={400}
-              src="/product-1.webp"
-              alt="hero"
-            />
-            <div className="text-center p-4">
-              <p className="text-3xl font-bold italic font-mono">
-                199 Luscious Red
-              </p>
-              <p className="uppercase my-2">rode gellak - 15 ml</p>
-              <p className="font-bold">€ 14,00</p>
-              <button className="mt-2 py-2 px-4 border border-gray-400">
-                Buy now
-              </button>
+          {dict.shop.items.map((item, index) => (
+            <div key={index} className="border-pink-100 border">
+              <Image
+                className="object-cover w-full"
+                width={400}
+                height={400}
+                src={item.image}
+                alt="hero"
+              />
+              <div className="text-center p-4">
+                <p className="text-3xl font-bold italic font-mono">
+                  {item.name}
+                </p>
+                <p className="uppercase my-2">{item.des}</p>
+                <p className="font-bold">{item.price}</p>
+                <button className="mt-2 py-2 px-4 border border-gray-400">
+                  {item.book}
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="border-pink-100 border">
-            <Image
-              className="object-cover w-full"
-              width={400}
-              height={400}
-              src="/product-2.webp"
-              alt="hero"
-            />
-            <div className="text-center p-4">
-              <p className="text-3xl font-bold italic font-mono">
-                Lipstack Red
-              </p>
-              <p className="uppercase my-2">rode gellak - 15 ml</p>
-              <p className="font-bold">€ 14,00</p>
-              <button className="mt-2 py-2 px-4 border border-gray-400">
-                Buy now
-              </button>
-            </div>
-          </div>
-          <div className="border-pink-100 border">
-            <Image
-              className="object-cover w-full"
-              width={400}
-              height={400}
-              src="/product-3.webp"
-              alt="hero"
-            />
-            <div className="text-center p-4">
-              <p className="text-3xl font-bold italic font-mono">
-                316 Jungle Green
-              </p>
-              <p className="uppercase my-2">rode gellak - 15 ml</p>
-              <p className="font-bold">€ 14,00</p>
-              <button className="mt-2 py-2 px-4 border border-gray-400">
-                Buy now
-              </button>
-            </div>
-          </div>
-          <div className="border-pink-100 border">
-            <Image
-              className="object-cover w-full"
-              width={400}
-              height={400}
-              src="/product-4.webp"
-              alt="hero"
-            />
-            <div className="text-center p-4">
-              <p className="text-3xl font-bold italic font-mono">
-                271 Palmbeach Green
-              </p>
-              <p className="uppercase my-2">rode gellak - 15 ml</p>
-              <p className="font-bold">€ 14,00</p>
-              <button className="mt-2 py-2 px-4 border border-gray-400">
-                Buy now
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       <section id="contact" className="pt-20">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-gray-800">Contact</h3>
+          <h3 className="text-4xl font-bold text-gray-800">{dict.contact}</h3>
         </div>
         <a href="https://maps.app.goo.gl/ka3bJrMHmJXmUzbe6" target="_blank">
           <Image
@@ -586,12 +569,10 @@ const ModernNailsLanding = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
               <h4 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Twin Nail Tech
+                {dict.footer.title}
               </h4>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Your destination for premium nail care and stunning nail art.
-                Book your appointment today and treat yourself to the pampering
-                you deserve.
+                {dict.footer.desc}
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
@@ -611,27 +592,27 @@ const ModernNailsLanding = () => {
             </div>
 
             <div>
-              <h5 className="text-lg font-semibold mb-4">Contact Info</h5>
+              <h5 className="text-lg font-semibold mb-4">
+                {dict.footer.contact_info.title}
+              </h5>
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-center">
                   <Phone size={16} className="mr-3" />
-                  <span>+31 {phoneNumber.replace("+31", "")}</span>
+                  <span>+31 {dict.footer.contact_info.phone}</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin size={16} className="mr-3" />
-                  <span>Stadhouderslaan 9, 2517 HV Den Haag</span>
+                  <span> {dict.footer.contact_info.address}</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Nails Saloon. All rights reserved.</p>
+            <p>&copy; {dict.footer.all_rights}</p>
           </div>
         </div>
       </footer>
     </div>
   );
-};
-
-export default ModernNailsLanding;
+}
