@@ -27,25 +27,21 @@
   ],
   "hero": {
     "hero_img": "/hand.webp",
-    "deal": "Oferta del día - ¡20% de descuento en Mejora de Uñas!",
-    "title": "Mima Tus",
-    "sub_title": "Uñas",
-    "description": "Experimenta el mejor cuidado de uñas con nuestros artistas expertos usando productos premium y ecológicos en un ambiente relajante.",
+    "deal": "Oferta del día - ¡20% de descuento en Mejoras de Uñas!",
+    "title": "La Belleza Comienza En",
+    "sub_title": "Tus Yemas de los Dedos",
+    "description": "Experimenta el mejor cuidado de uñas con nuestros expertos artistas que utilizan productos premium y ecológicos en un ambiente relajante.",
     "btn1": "RESERVAR CITA",
     "btn2": "Llámanos",
     "reviews": "500+ reseñas",
     "experience_year": "3",
     "exp": "Años de Experiencia",
-    "title1": "Twin N",
-    "title2": "ail Tech"
-  },
-  "about": {
-    "title": "Acerca de Nosotros",
-    "desc": "Twin Nail Tech, establecido en 2019, se destaca como uno de los mejores estudios de uñas en La Haya, con técnicos de uñas profesionales que diseñan sus ideas con la máxima precisión. Creemos que las uñas expresan lo que las palabras a menudo no pueden. Por eso nos enfocamos en capturar su historia, expresión, creencias y esencia para plasmar su historia de manera hermosa. Nuestro equipo galardonado de artistas de uñas sobresale en crear arte de uñas personalizado y creativo que resuena profundamente con nuestros clientes. Nuestro éxito proviene de entender los deseos de nuestros clientes y entregar resultados excepcionales, asegurando que cada obra de arte deje una sonrisa duradera. La pasión impulsa a nuestros artistas a crear piezas que realmente resuenan, asegurando que cada cliente se vaya con uñas que ame. Este compromiso con la excelencia define nuestro viaje, haciendo de Twin Nail Tech un destino para aquellos que buscan no solo cuidado de uñas, sino una experiencia artística creada con cuidado y experiencia."
+    "title1": "Lilux",
+    "title2": "Beauty"
   },
   "service": {
     "title": "Nuestros Servicios",
-    "description": "Desde manicuras clásicas hasta arte de uñas intrincado, ofrecemos servicios premium adaptados a tu estilo.",
+    "description": "Desde manicuras clásicas hasta intrincados diseños de uñas, ofrecemos servicios premium adaptados a tu estilo.",
     "services": [
       {
         "name": "Manicura Clásica",
@@ -60,13 +56,13 @@
         "book": "Reservar Ahora"
       },
       {
-        "name": "Diseño de Arte de Uñas",
+        "name": "Diseño de Uñas",
         "price": "€65",
         "duration": "90 min",
         "book": "Reservar Ahora"
       },
       {
-        "name": "Extensiones Acrílicas",
+        "name": "Extensiones de Acrílico",
         "price": "€70",
         "duration": "120 min",
         "book": "Reservar Ahora"
@@ -77,30 +73,30 @@
     "title": "Tienda",
     "items": [
       {
-        "name": "199 Rojo Exuberante",
+        "name": "199 Luscious Red",
         "price": "14,00",
-        "des": "esmalte en gel rojo - 15 ml",
+        "des": "esmalte de gel rojo - 15 ml",
         "book": "Comprar Ahora",
         "image": "/product-1.webp"
       },
       {
-        "name": "Rojo Labial",
+        "name": "Lipstack Red",
         "price": "14,00",
-        "des": "esmalte en gel rojo - 15 ml",
+        "des": "esmalte de gel rojo - 15 ml",
         "book": "Comprar Ahora",
         "image": "/product-2.webp"
       },
       {
-        "name": "316 Verde Selva",
+        "name": "316 Jungle Green",
         "price": "14,00",
-        "des": "esmalte en gel verde - 15 ml",
+        "des": "esmalte de gel rojo - 15 ml",
         "book": "Comprar Ahora",
         "image": "/product-3.webp"
       },
       {
-        "name": "271 Verde Palmbeach",
+        "name": "271 Palmbeach Greenß",
         "price": "14,00",
-        "des": "esmalte en gel verde - 15 ml",
+        "des": "esmalte de gel rojo - 15 ml",
         "book": "Comprar Ahora",
         "image": "/product-4.webp"
       }
@@ -108,21 +104,21 @@
   },
   "feature": [
     {
-      "name": "Artistas Expertos de Uñas",
-      "description": "Nuestros artistas de uñas son técnicos licenciados con años de experiencia y talento artístico, asegurando resultados perfectos cada vez."
+      "name": "Artistas Expertos en Uñas",
+      "description": "Nuestros artistas de uñas son técnicos licenciados con años de experiencia y estilo artístico, garantizando resultados perfectos en cada ocasión."
     },
     {
       "name": "Experiencia Premium",
-      "description": "Relájate en nuestro ambiente de salón lujoso diseñado para comodidad y tranquilidad mientras recibes servicios de cuidado de uñas de primera clase."
+      "description": "Relájate en nuestro lujoso ambiente de salón diseñado para la comodidad y la tranquilidad mientras recibes servicios de cuidado de uñas de primera categoría."
     },
     {
       "name": "Productos Ecológicos",
-      "description": "Usamos solo productos veganos, libres de crueldad y ambientalmente conscientes que son suaves con tus uñas y el planeta."
+      "description": "Utilizamos solo productos veganos, libres de crueldad y respetuosos con el medio ambiente que son suaves con tus uñas y el planeta."
     }
   ],
   "gallery": {
     "title": "Galería",
-    "desc": "Nuestra última pieza",
+    "desc": "Nuestro último trabajo",
     "see_more": "Más en Instagram",
     "images": [
       "/leaf.avif",
@@ -135,14 +131,14 @@
   },
   "contact": "Contacto",
   "footer": {
-    "title": "Twin Nail Tech",
-    "desc": "Tu destino para cuidado de uñas premium y arte de uñas impresionante. Reserva tu cita hoy y date el mimo que te mereces.",
+    "title": "Liluxe Beauty",
+    "desc": "Tu destino para el cuidado premium de uñas y arte de uñas impresionante. Reserva tu cita hoy y date el capricho que te mereces.",
     "contact_info": {
       "title": "Información de Contacto",
-      "phone": "+31 0638666118",
-      "address": "Stadhouderslaan 9, 2517 HV Den Haag"
+      "phone": "+31 0658842814",
+      "address": "Hoogstraat 137-139, 3011 PM Rotterdam"
     },
-    "all_rights": "© 2025 Twin Nail Tech. Todos los derechos reservados."
+    "all_rights": "© 2025 Liluxe Beauty. Todos los derechos reservados."
   },
   "testimonial": {
     "title": "Lo Que Dicen Nuestros Clientes",
@@ -152,7 +148,7 @@
       {
         "name": "Sarah M.",
         "rating": 5,
-        "text": "¡Trabajo absolutamente impresionante! Mis uñas nunca se habían visto mejor."
+        "text": "¡Un trabajo absolutamente impresionante! Mis uñas nunca habían lucido mejor."
       },
       {
         "name": "Jessica L.",

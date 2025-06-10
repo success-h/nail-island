@@ -1,125 +1,125 @@
 {
   "navigation": [
     {
-      "name": "Diensten",
+      "name": "Servicios",
       "link": "#services"
     },
     {
-      "name": "Getuigenissen",
+      "name": "Testimonios",
       "link": "#testimonials"
     },
     {
-      "name": "Galerij",
+      "name": "Galería",
       "link": "#gallery"
     },
     {
-      "name": "Winkel",
+      "name": "Tienda",
       "link": "#shop"
     },
     {
-      "name": "Contact",
+      "name": "Contacto",
       "link": "#contact"
     },
     {
-      "name": "Nu Boeken",
+      "name": "Reservar Ahora",
       "link": "#book"
     }
   ],
   "hero": {
     "hero_img": "/hand.webp",
-    "deal": "Deal van de dag - 20% korting op nagelverbetering!",
-    "title": "Verwen uw",
-    "sub_title": "Nagels",
-    "description": "Ervaar de beste nagelverzorging met onze deskundige artiesten die eersteklas, milieuvriendelijke producten gebruiken in een ontspannen sfeer.",
-    "btn1": "AFSPRAAK MAKEN",
-    "btn2": "Bel Ons",
-    "reviews": "500+ beoordelingen",
+    "deal": "Oferta del día - ¡20% de descuento en Mejoras de Uñas!",
+    "title": "La Belleza Comienza En",
+    "sub_title": "Tus Yemas de los Dedos",
+    "description": "Experimenta el mejor cuidado de uñas con nuestros expertos artistas que utilizan productos premium y ecológicos en un ambiente relajante.",
+    "btn1": "RESERVAR CITA",
+    "btn2": "Llámanos",
+    "reviews": "500+ reseñas",
     "experience_year": "3",
-    "exp": "Jaar Ervaring",
-    "title1": "Twin N",
-    "title2": "agel Tech"
+    "exp": "Años de Experiencia",
+    "title1": "Lilux",
+    "title2": "Beauty"
   },
   "service": {
-    "title": "Onze Diensten",
-    "description": "Van klassieke manicure tot ingewikkelde nail art, wij bieden eersteklas diensten op maat van jouw stijl.",
+    "title": "Nuestros Servicios",
+    "description": "Desde manicuras clásicas hasta intrincados diseños de uñas, ofrecemos servicios premium adaptados a tu estilo.",
     "services": [
       {
-        "name": "Klassieke Manicure",
+        "name": "Manicura Clásica",
         "price": "€35",
         "duration": "45 min",
-        "book": "Nu Boeken"
+        "book": "Reservar Ahora"
       },
       {
-        "name": "Gel Manicure",
+        "name": "Manicura en Gel",
         "price": "€50",
         "duration": "60 min",
-        "book": "Nu Boeken"
+        "book": "Reservar Ahora"
       },
       {
-        "name": "Nagelkunst Ontwerp",
+        "name": "Diseño de Uñas",
         "price": "€65",
         "duration": "90 min",
-        "book": "Nu Boeken"
+        "book": "Reservar Ahora"
       },
       {
-        "name": "Acryl Extensies",
+        "name": "Extensiones de Acrílico",
         "price": "€70",
         "duration": "120 min",
-        "book": "Nu Boeken"
+        "book": "Reservar Ahora"
       }
     ]
   },
   "shop": {
-    "title": "Winkel",
+    "title": "Tienda",
     "items": [
       {
-        "name": "199 Weelderig Rood",
+        "name": "199 Luscious Red",
         "price": "14,00",
-        "des": "rode gellak - 15 ml",
-        "book": "Nu Kopen",
+        "des": "esmalte de gel rojo - 15 ml",
+        "book": "Comprar Ahora",
         "image": "/product-1.webp"
       },
       {
-        "name": "Lipstick Rood",
+        "name": "Lipstack Red",
         "price": "14,00",
-        "des": "rode gellak - 15 ml",
-        "book": "Nu Kopen",
+        "des": "esmalte de gel rojo - 15 ml",
+        "book": "Comprar Ahora",
         "image": "/product-2.webp"
       },
       {
-        "name": "316 Jungle Groen",
+        "name": "316 Jungle Green",
         "price": "14,00",
-        "des": "groene gellak - 15 ml",
-        "book": "Nu Kopen",
+        "des": "esmalte de gel rojo - 15 ml",
+        "book": "Comprar Ahora",
         "image": "/product-3.webp"
       },
       {
-        "name": "271 Palmbeach Groen",
+        "name": "271 Palmbeach Greenß",
         "price": "14,00",
-        "des": "groene gellak - 15 ml",
-        "book": "Nu Kopen",
+        "des": "esmalte de gel rojo - 15 ml",
+        "book": "Comprar Ahora",
         "image": "/product-4.webp"
       }
     ]
   },
   "feature": [
     {
-      "name": "Expert Nagelkunstenaars",
-      "description": "Onze nagelkunstenaars zijn gediplomeerde technici met jarenlange ervaring en artistieke flair, die elke keer perfecte resultaten garanderen."
+      "name": "Artistas Expertos en Uñas",
+      "description": "Nuestros artistas de uñas son técnicos licenciados con años de experiencia y estilo artístico, garantizando resultados perfectos en cada ocasión."
     },
     {
-      "name": "Premium Ervaring",
-      "description": "Ontspan in onze luxueuze salonsfeer ontworpen voor comfort en rust terwijl u eersteklas nagelzorg diensten ontvangt."
+      "name": "Experiencia Premium",
+      "description": "Relájate en nuestro lujoso ambiente de salón diseñado para la comodidad y la tranquilidad mientras recibes servicios de cuidado de uñas de primera categoría."
     },
     {
-      "name": "Milieuvriendelijke Producten",
-      "description": "Wij gebruiken alleen veganistische, diervriendelijke en milieubewuste producten die zacht zijn voor uw nagels en de planeet."
+      "name": "Productos Ecológicos",
+      "description": "Utilizamos solo productos veganos, libres de crueldad y respetuosos con el medio ambiente que son suaves con tus uñas y el planeta."
     }
   ],
   "gallery": {
-    "title": "Galerij",
-    "desc": "Ons nieuwste werk",
-    "see_more": "Meer op Instagram",
+    "title": "Galería",
+    "desc": "Nuestro último trabajo",
+    "see_more": "Más en Instagram",
     "images": [
       "/leaf.avif",
       "/1.png",
@@ -129,36 +129,36 @@
       "/3.png"
     ]
   },
-  "contact": "Contact",
+  "contact": "Contacto",
   "footer": {
-    "title": "Twin Nail Tech",
-    "desc": "Jouw bestemming voor eersteklas nagelverzorging en prachtige nail art. Maak vandaag nog een afspraak en trakteer jezelf op de verwennerij die je verdient.",
+    "title": "Liluxe Beauty",
+    "desc": "Tu destino para el cuidado premium de uñas y arte de uñas impresionante. Reserva tu cita hoy y date el capricho que te mereces.",
     "contact_info": {
-      "title": "Contactgegevens",
-      "phone": "+31 0638666118",
-      "address": "Stadhouderslaan 9, 2517 HV Den Haag"
+      "title": "Información de Contacto",
+      "phone": "+31 0658842814",
+      "address": "Hoogstraat 137-139, 3011 PM Rotterdam"
     },
-    "all_rights": "© 2025 Twin Nail Tech. Alle rechten voorbehouden."
+    "all_rights": "© 2025 Liluxe Beauty. Todos los derechos reservados."
   },
   "testimonial": {
-    "title": "Wat Onze Klanten Zeggen",
-    "desc": "Echte beoordelingen van tevreden klanten",
-    "review": "500+ beoordelingen",
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "desc": "Reseñas reales de clientes satisfechos",
+    "review": "500+ reseñas",
     "testimonies": [
       {
         "name": "Sarah M.",
         "rating": 5,
-        "text": "Absoluut prachtig werk! Mijn nagels hebben er nog nooit zo goed uitgezien."
+        "text": "¡Un trabajo absolutamente impresionante! Mis uñas nunca habían lucido mejor."
       },
       {
         "name": "Jessica L.",
         "rating": 5,
-        "text": "De aandacht voor detail is ongelooflijk. Zeer aan te bevelen!"
+        "text": "La atención al detalle es increíble. ¡Altamente recomendado!"
       },
       {
         "name": "Emma K.",
         "rating": 5,
-        "text": "Zo'n ontspannende ervaring met elke keer geweldige resultaten."
+        "text": "Una experiencia tan relajante con resultados increíbles cada vez."
       }
     ]
   }

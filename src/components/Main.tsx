@@ -33,8 +33,8 @@ export default function Main({ dict }: SectionProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [showModal, setShowModal] = useState(false);
-  const bookingUrl = 'https://twin-nailtechs.salonized.com/widget_bookings/new';
-  const phoneNumber = '+310638666118';
+  const bookingUrl = 'https://liluxe-1.salonized.com/widget_bookings/new';
+  const phoneNumber = '+310658842814';
   const pathname = usePathname();
   const router = useRouter();
   const { language, setLanguage } = useLanguage();
@@ -66,7 +66,7 @@ export default function Main({ dict }: SectionProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-purple-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-emerald-50 relative overflow-hidden">
       <Dialog open={showModal} onOpenChange={setShowModal}>
         <DialogContent className="sm:max-w-[425px] bg-white">
           <DialogHeader>
@@ -141,9 +141,9 @@ export default function Main({ dict }: SectionProps) {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
               {dict.hero.title1}
-              <span className="inline-block w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mx-1 animate-pulse"></span>
+              <span className="inline-block w-3 h-3 bg-gradient-to-r from-blue-400 to-emerald-400 rounded-full mx-1 animate-pulse"></span>
               {dict.hero.title2}
             </h1>
           </div>
@@ -157,13 +157,13 @@ export default function Main({ dict }: SectionProps) {
                 className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-emerald-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
             <a
               href={bookingUrl}
               target="_blank"
-              className="bg-gradient-to-r hover:from-purple-300 from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium"
+              className="bg-gradient-to-r hover:from-purple-300 from-blue-600 to-emerald-600 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium"
             >
               {dict.navigation[5].name}
             </a>
@@ -206,7 +206,7 @@ export default function Main({ dict }: SectionProps) {
                 {item.name}
               </a>
             ))}
-            <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 font-medium">
+            <button className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 font-medium">
               {dict.navigation[5].name}
             </button>
           </div>
@@ -224,10 +224,10 @@ export default function Main({ dict }: SectionProps) {
                   <Sparkles size={16} className="mr-2" />
                   {dict.hero.deal}
                 </div>
-                <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-800 via-purple-700 to-pink-700 bg-clip-text text-transparent leading-tight">
+                <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-emerald-800 via-blue-700 to-emerald-700 bg-clip-text text-transparent leading-tight">
                   {dict.hero.title}
                   <br />
-                  <span className="text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
+                  <span className="text-transparent bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text">
                     {dict.hero.sub_title}
                   </span>
                 </h2>
@@ -240,7 +240,7 @@ export default function Main({ dict }: SectionProps) {
                 <a
                   href={bookingUrl}
                   target="_blank"
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer hover:from-purple-300 flex items-center"
+                  className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer hover:from-purple-300 flex items-center"
                 >
                   <Calendar size={20} className="mr-2" />
                   {dict.hero.btn1}
@@ -308,7 +308,7 @@ export default function Main({ dict }: SectionProps) {
 
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-full opacity-80 animate-bounce"></div>
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-br from-green-200 to-blue-200 rounded-full opacity-70 animate-pulse"></div>
+              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-br from-emerald-200 to-blue-200 rounded-full opacity-70 animate-pulse"></div>
             </div>
           </div>
         </div>
@@ -343,7 +343,7 @@ export default function Main({ dict }: SectionProps) {
                   <a
                     href={bookingUrl}
                     target="_blank"
-                    className="px-4 w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-full hover:shadow-lg transition-all duration-300"
+                    className="px-4 w-full bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-2 rounded-full hover:shadow-lg transition-all duration-300"
                   >
                     {service.book}
                   </a>
@@ -361,8 +361,8 @@ export default function Main({ dict }: SectionProps) {
             {/* Expert Nail Artists */}
             {dict.feature.map((item, index) => (
               <div key={index} className="text-center space-y-6 group">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 ">
-                  <User size={36} className="text-purple-600" />
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-emerald-100 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 ">
+                  <User size={36} className="text-emerald-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800">
                   {item.name}
@@ -379,7 +379,7 @@ export default function Main({ dict }: SectionProps) {
       {/* Testimonials Section */}
       <section
         id="testimonials"
-        className="py-20 bg-gradient-to-r from-purple-50 to-pink-50"
+        className="py-20 bg-gradient-to-r from-emerald-50 to-blue-50"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -546,7 +546,7 @@ export default function Main({ dict }: SectionProps) {
         <div className="text-center mb-16">
           <h3 className="text-4xl font-bold text-gray-800">{dict.contact}</h3>
         </div>
-        <a href="https://maps.app.goo.gl/ka3bJrMHmJXmUzbe6" target="_blank">
+        <a href="https://maps.app.goo.gl/Cv1W1uBxM5XgCeSn8" target="_blank">
           <Image
             width={2000}
             height={400}
@@ -561,24 +561,24 @@ export default function Main({ dict }: SectionProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
-              <h4 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <h4 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">
                 {dict.footer.title}
               </h4>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {dict.footer.desc}
               </p>
               <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
                   <FaInstagram size={20} />
                 </div>
                 <a
                   href="https://www.facebook.com/nailsbynailsaloon/"
                   target="_blank"
-                  className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer"
+                  className="w-10 h-10 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer"
                 >
                   <FaFacebook size={20} />
                 </a>
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
                   <FaTwitter size={20} />
                 </div>
               </div>
