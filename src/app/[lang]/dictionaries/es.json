@@ -28,16 +28,16 @@
   "hero": {
     "hero_img": "/hand.jpg",
     "deal": "Oferta del día - ¡20% de descuento en Mejoras de Uñas!",
-    "title": "La Belleza Comienza En",
-    "sub_title": "Tus Yemas de los Dedos",
+    "title": "Toque Mágico,",
+    "sub_title": "Uñas Más Bonitas",
     "description": "Experimenta el mejor cuidado de uñas con nuestros expertos artistas que utilizan productos premium y ecológicos en un ambiente relajante.",
     "btn1": "RESERVAR CITA",
     "btn2": "Llámanos",
     "reviews": "500+ reseñas",
     "experience_year": "3",
     "exp": "Años de Experiencia",
-    "title1": "Lilux",
-    "title2": "Beauty"
+    "title1": "Ela",
+    "title2": "Beauty Nails"
   },
   "service": {
     "title": "Nuestros Servicios",
@@ -131,14 +131,14 @@
   },
   "contact": "Contacto",
   "footer": {
-    "title": "Liluxe Beauty",
+    "title": "Ela Beauty Nails",
     "desc": "Tu destino para el cuidado premium de uñas y arte de uñas impresionante. Reserva tu cita hoy y date el capricho que te mereces.",
     "contact_info": {
       "title": "Información de Contacto",
-      "phone": "+31 0658842814",
-      "address": "Hoogstraat 137-139, 3011 PM Rotterdam"
+      "phone": "634647579",
+      "address": "Bergweg 261A, 3037 EM Rotterdam, Países Bajos"
     },
-    "all_rights": "© 2025 Liluxe Beauty. Todos los derechos reservados."
+    "all_rights": "© 2025 Ela Beauty Nails. Todos los derechos reservados."
   },
   "testimonial": {
     "title": "Lo Que Dicen Nuestros Clientes",
