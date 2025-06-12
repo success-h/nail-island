@@ -28,16 +28,17 @@
   "hero": {
     "hero_img": "/hand.jpg",
     "deal": "Deal van de dag - 20% korting op Nagelverlenging!",
-    "title": "Magische Aanraking,",
-    "sub_title": "Mooiere Nagels",
-    "description": "Ervaar de beste nagelverzorging met onze deskundige artiesten die hoogwaardige, milieuvriendelijke producten gebruiken in een ontspannen sfeer.",
+    "title": "Jouw",
+    "sub_title": "schoonheids",
+    "sub_title2": "ruimte",
+    "description": "Ervaar de beste nagelverzorging met onze deskundige artiesten die premium, milieuvriendelijke producten gebruiken in een ontspannen sfeer.",
     "btn1": "AFSPRAAK MAKEN",
     "btn2": "Bel Ons",
-    "reviews": "500+ beoordelingen",
+    "reviews": "500+ recensies",
     "experience_year": "3",
     "exp": "Jaar Ervaring",
-    "title1": "Ela",
-    "title2": "Beauty Nails"
+    "title1": "Nails Island",
+    "title2": "Schoonheidssalon"
   },
   "service": {
     "title": "Onze Diensten",
@@ -56,13 +57,13 @@
         "book": "Boek Nu"
       },
       {
-        "name": "Nail Art Design",
+        "name": "Nail Art Ontwerp",
         "price": "€65",
         "duration": "90 min",
         "book": "Boek Nu"
       },
       {
-        "name": "Acryl Extensions",
+        "name": "Acryl Extensies",
         "price": "€70",
         "duration": "120 min",
         "book": "Boek Nu"
@@ -73,28 +74,28 @@
     "title": "Winkel",
     "items": [
       {
-        "name": "199 Luscious Red",
+        "name": "199 Weelderig Rood",
         "price": "14,00",
         "des": "rode gellak - 15 ml",
         "book": "Koop Nu",
         "image": "/product-1.webp"
       },
       {
-        "name": "Lipstack Red",
+        "name": "Lipstack Rood",
         "price": "14,00",
         "des": "rode gellak - 15 ml",
         "book": "Koop Nu",
         "image": "/product-2.webp"
       },
       {
-        "name": "316 Jungle Green",
+        "name": "316 Jungle Groen",
         "price": "14,00",
         "des": "rode gellak - 15 ml",
         "book": "Koop Nu",
         "image": "/product-3.webp"
       },
       {
-        "name": "271 Palmbeach Greenß",
+        "name": "271 Palmbeach Groen",
         "price": "14,00",
         "des": "rode gellak - 15 ml",
         "book": "Koop Nu",
@@ -105,15 +106,15 @@
   "feature": [
     {
       "name": "Deskundige Nagelartiesten",
-      "description": "Onze nagelartiesten zijn gediplomeerde technici met jarenlange ervaring en artistieke flair, waardoor ze elke keer perfecte resultaten garanderen."
+      "description": "Onze nagelartiesten zijn gediplomeerde technici met jarenlange ervaring en artistieke flair, waardoor perfecte resultaten gegarandeerd zijn."
     },
     {
       "name": "Premium Ervaring",
-      "description": "Ontspan in onze luxe salonomgeving die is ontworpen voor comfort en rust terwijl je eersteklas nagelverzorgingsdiensten ontvangt."
+      "description": "Ontspan in onze luxe salonomgeving die is ontworpen voor comfort en rust terwijl u topnagelverzorgingsdiensten ontvangt."
     },
     {
       "name": "Milieuvriendelijke Producten",
-      "description": "We gebruiken alleen veganistische, dierproefvrije en milieubewuste producten die zacht zijn voor je nagels en de planeet."
+      "description": "We gebruiken alleen veganistische, dierproefvrije en milieubewuste producten die zacht zijn voor uw nagels en de planeet."
     }
   ],
   "gallery": {
@@ -131,19 +132,19 @@
   },
   "contact": "Contact",
   "footer": {
-    "title": "Ela Beauty Nails",
-    "desc": "Jouw bestemming voor premium nagelverzorging en prachtige nail art. Boek vandaag nog je afspraak en gun jezelf de verwennerij die je verdient.",
+    "title": "Nails Island Schoonheidssalon",
+    "desc": "Jouw bestemming voor premium nagelverzorging en prachtige nail art. Boek vandaag nog uw afspraak en gun uzelf de verwennerij die u verdient.",
     "contact_info": {
       "title": "Contactgegevens",
-      "phone": "634647579",
-      "address": "Bergweg 261A, 3037 EM Rotterdam, Nederland"
+      "phone": "621668048",
+      "address": "Grote Beer 19H, 3067 TR Rotterdam"
     },
-    "all_rights": "© 2025 Ela Beauty Nails. Alle rechten voorbehouden."
+    "all_rights": "© 2025 Nails Island Schoonheidssalon. Alle rechten voorbehouden."
   },
   "testimonial": {
     "title": "Wat Onze Klanten Zeggen",
-    "desc": "Echte reviews van tevreden klanten",
-    "review": "500+ beoordelingen",
+    "desc": "Echte recensies van tevreden klanten",
+    "review": "500+ recensies",
     "testimonies": [
       {
         "name": "Sarah M.",
@@ -153,7 +154,7 @@
       {
         "name": "Jessica L.",
         "rating": 5,
-        "text": "De aandacht voor detail is ongelooflijk. Zeer aan te bevelen!"
+        "text": "De aandacht voor detail is ongelooflijk. Zeer aan te raden!"
       },
       {
         "name": "Emma K.",

@@ -28,16 +28,17 @@
   "hero": {
     "hero_img": "/hand.jpg",
     "deal": "Deal of the day - 20% off Nail Enhancement!",
-    "title": "Magic Touch,",
-    "sub_title": "Prettier Nails",
+    "title": "Your",
+    "sub_title": "beauty",
+    "sub_title2": "space",
     "description": "Experience the best nail care with our expert artists using premium, eco-friendly products in a relaxing atmosphere.",
     "btn1": "BOOK APPOINTMENT",
     "btn2": "Call Us",
     "reviews": "500+ reviews",
     "experience_year": "3",
     "exp": "Years Experience",
-    "title1": "Ela",
-    "title2": "Beauty Nails"
+    "title1": "Nails Island",
+    "title2": "Beauty Salon"
   },
   "service": {
     "title": "Our Services",
@@ -131,14 +132,14 @@
   },
   "contact": "Contact",
   "footer": {
-    "title": "Ela Beauty Nails",
+    "title": "Nails Island Beauty Salon",
     "desc": "Your destination for premium nail care and stunning nail art. Book your appointment today and treat yourself to the pampering you deserve.",
     "contact_info": {
       "title": "Contact Info",
-      "phone": "634647579",
-      "address": "Bergweg 261A, 3037 EM Rotterdam, Nederland"
+      "phone": "621668048",
+      "address": "Grote Beer 19H, 3067 TR Rotterdam"
     },
-    "all_rights": "© 2025 Ela Beauty Nails. All rights reserved."
+    "all_rights": "© 2025 Nails Island Beauty Salon. All rights reserved."
   },
   "testimonial": {
     "title": "What Our Clients Say",

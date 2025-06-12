@@ -28,16 +28,17 @@
   "hero": {
     "hero_img": "/hand.jpg",
     "deal": "Oferta del día - ¡20% de descuento en Mejoras de Uñas!",
-    "title": "Toque Mágico,",
-    "sub_title": "Uñas Más Bonitas",
+    "title": "Tu",
+    "sub_title": "espacio",
+    "sub_title2": "de belleza",
     "description": "Experimenta el mejor cuidado de uñas con nuestros expertos artistas que utilizan productos premium y ecológicos en un ambiente relajante.",
     "btn1": "RESERVAR CITA",
     "btn2": "Llámanos",
     "reviews": "500+ reseñas",
     "experience_year": "3",
     "exp": "Años de Experiencia",
-    "title1": "Ela",
-    "title2": "Beauty Nails"
+    "title1": "Nails Island",
+    "title2": "Salón de Belleza"
   },
   "service": {
     "title": "Nuestros Servicios",
@@ -62,7 +63,7 @@
         "book": "Reservar Ahora"
       },
       {
-        "name": "Extensiones de Acrílico",
+        "name": "Extensiones Acrílicas",
         "price": "€70",
         "duration": "120 min",
         "book": "Reservar Ahora"
@@ -73,30 +74,30 @@
     "title": "Tienda",
     "items": [
       {
-        "name": "199 Luscious Red",
+        "name": "199 Rojo Lujurioso",
         "price": "14,00",
-        "des": "esmalte de gel rojo - 15 ml",
+        "des": "esmalte en gel rojo - 15 ml",
         "book": "Comprar Ahora",
         "image": "/product-1.webp"
       },
       {
-        "name": "Lipstack Red",
+        "name": "Lipstack Rojo",
         "price": "14,00",
-        "des": "esmalte de gel rojo - 15 ml",
+        "des": "esmalte en gel rojo - 15 ml",
         "book": "Comprar Ahora",
         "image": "/product-2.webp"
       },
       {
-        "name": "316 Jungle Green",
+        "name": "316 Verde Jungla",
         "price": "14,00",
-        "des": "esmalte de gel rojo - 15 ml",
+        "des": "esmalte en gel rojo - 15 ml",
         "book": "Comprar Ahora",
         "image": "/product-3.webp"
       },
       {
-        "name": "271 Palmbeach Greenß",
+        "name": "271 Verde Palmbeach",
         "price": "14,00",
-        "des": "esmalte de gel rojo - 15 ml",
+        "des": "esmalte en gel rojo - 15 ml",
         "book": "Comprar Ahora",
         "image": "/product-4.webp"
       }
@@ -104,12 +105,12 @@
   },
   "feature": [
     {
-      "name": "Artistas Expertos en Uñas",
-      "description": "Nuestros artistas de uñas son técnicos licenciados con años de experiencia y estilo artístico, garantizando resultados perfectos en cada ocasión."
+      "name": "Artistas de Uñas Expertos",
+      "description": "Nuestros artistas de uñas son técnicos licenciados con años de experiencia y estilo artístico, garantizando resultados perfectos cada vez."
     },
     {
       "name": "Experiencia Premium",
-      "description": "Relájate en nuestro lujoso ambiente de salón diseñado para la comodidad y la tranquilidad mientras recibes servicios de cuidado de uñas de primera categoría."
+      "description": "Relájate en nuestro lujoso entorno de salón diseñado para la comodidad y la tranquilidad mientras recibes servicios de cuidado de uñas de primer nivel."
     },
     {
       "name": "Productos Ecológicos",
@@ -131,14 +132,14 @@
   },
   "contact": "Contacto",
   "footer": {
-    "title": "Ela Beauty Nails",
+    "title": "Nails Island Salón de Belleza",
     "desc": "Tu destino para el cuidado premium de uñas y arte de uñas impresionante. Reserva tu cita hoy y date el capricho que te mereces.",
     "contact_info": {
       "title": "Información de Contacto",
-      "phone": "634647579",
-      "address": "Bergweg 261A, 3037 EM Rotterdam, Países Bajos"
+      "phone": "621668048",
+      "address": "Grote Beer 19H, 3067 TR Rotterdam"
     },
-    "all_rights": "© 2025 Ela Beauty Nails. Todos los derechos reservados."
+    "all_rights": "© 2025 Nails Island Salón de Belleza. Todos los derechos reservados."
   },
   "testimonial": {
     "title": "Lo Que Dicen Nuestros Clientes",
@@ -148,17 +149,17 @@
       {
         "name": "Sarah M.",
         "rating": 5,
-        "text": "¡Un trabajo absolutamente impresionante! Mis uñas nunca habían lucido mejor."
+        "text": "¡Un trabajo absolutamente impresionante! Mis uñas nunca se habían visto mejor."
       },
       {
         "name": "Jessica L.",
         "rating": 5,
-        "text": "La atención al detalle es increíble. ¡Altamente recomendado!"
+        "text": "La atención al detalle es increíble. ¡Muy recomendado!"
       },
       {
         "name": "Emma K.",
         "rating": 5,
-        "text": "Una experiencia tan relajante con resultados increíbles cada vez."
+        "text": "Una experiencia tan relajante con resultados asombrosos cada vez."
       }
     ]
   }
