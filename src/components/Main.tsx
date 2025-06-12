@@ -6,15 +6,13 @@ import {
   Menu,
   X,
   User,
-  Sparkles,
   Star,
-  Calendar,
   Phone,
   MapPin,
   ChevronDown,
   Check,
 } from 'lucide-react';
-import { FaWhatsapp, FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import {
@@ -35,7 +33,7 @@ export default function Main({ dict }: SectionProps) {
   const [scrollY, setScrollY] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const bookingUrl = 'https://widget.treatwell.nl/en/place/100048213/menu';
-  const phoneNumber = '+31621668048';
+  // const phoneNumber = '+31621668048';
   const pathname = usePathname();
   const router = useRouter();
   const { language, setLanguage } = useLanguage();
@@ -66,11 +64,11 @@ export default function Main({ dict }: SectionProps) {
     router.push(newPath);
   };
 
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
