@@ -159,7 +159,7 @@ export default function Main({ dict }: SectionProps) {
                 scrollY > 50
                   ? 'from-amber-400 to-pink-400'
                   : 'from-blue-100 to-green-100'
-              } text-2xl font-bold bg-gradient-to-r bg-clip-text text-transparent`}
+              } md:text-2xl font-bold bg-gradient-to-r bg-clip-text text-transparent`}
             >
               {dict.hero.title1}
               <span
@@ -204,12 +204,24 @@ export default function Main({ dict }: SectionProps) {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center">
+            <Button variant={'ghost'} onClick={() => setShowModal(true)}>
+              <div className="cursor-pointer py-1 flex items-center text-lg uppercase border border-black px-4 rounded-full bg-transparent">
+                {language === 'en' ? '🇺🇸' : language === 'es' ? '🇪🇸' : '🇳🇱'}{' '}
+                {language}
+                <ChevronDown />{' '}
+              </div>
+            </Button>
+
             <button
               onClick={toggleMobileMenu}
-              className="text-gray-700 hover:text-amber-600 transition-colors p-2"
+              className="text-gray-700 hover:text-stone-700 transition-colors p-2"
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? (
+                <X color={scrollY ? '#111' : '#eee'} size={24} />
+              ) : (
+                <Menu color={scrollY ? '#111' : '#eee'} size={24} />
+              )}
             </button>
           </div>
         </div>
