@@ -15,7 +15,7 @@ const geistMono = Shadows_Into_Light_Two({
 });
 
 export const metadata: Metadata = {
-  title: 'Ela Beauty Nails - Rotterdam',
+  title: 'Nails Island Beauty Salon - Rotterdam',
   description: 'Magic at finger tips',
 };
 
